@@ -100,7 +100,7 @@ Now I hope you can see what’s going on inside this function, so you can add yo
 
 ## Payloads
 
-#### [+] <span style="color:red">Basic LFI (null byte, double encoding and other tricks) :</span>
+#### [+] <span style="color🟢">Basic LFI (null byte, double encoding and other tricks)</span> :
 
 ```
 http://example.com/index.php?page=etc/passwd
