@@ -8,7 +8,7 @@
   <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"> <img src="https://img.shields.io/github/stars/payloadbox/rfi-lfi-payload-list?style=social"> <img src="https://img.shields.io/github/forks/payloadbox/rfi-lfi-payload-list?style=social"> <img src="https://img.shields.io/github/repo-size/payloadbox/payloadbox/rfi-lfi-payload-list"> <img src="https://img.shields.io/github/license/payloadbox/rfi-lfi-payload-list"> <img src="https://img.shields.io/github/issues/detail/author//payloadbox/rfi-lfi-payload-list/1">
 </p>
 
-## Conceptos
+## Explicación
 
 As with many exploits, remote and local file inclusions are only a problem at the end of the encoding. Of course, it takes a second person to have it. Now, this article will hopefully give you an idea of protecting your website and most importantly your code from a file iclusion exploit. I’ll give example codes in PHP format.
 
@@ -97,6 +97,8 @@ return ($ input);
 ```
 
 Now I hope you can see what’s going on inside this function, so you can add yours. I would suggest using the str_replace () function and there are a lot of other functions to clear them. Be considerate and stop the RFI & LFI exploit frenzy!
+
+## Explotación
 
 #### Basic LFI (null byte, double encoding and other tricks) :
 
