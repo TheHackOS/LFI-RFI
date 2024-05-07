@@ -100,7 +100,7 @@ Now I hope you can see what’s going on inside this function, so you can add yo
 
 ## Explotación
 
-#### Basic LFI (null byte, double encoding and other tricks) :
+#### [+] Basic LFI (null byte, double encoding and other tricks) :
 
 ```
 http://example.com/index.php?page=etc/passwd
